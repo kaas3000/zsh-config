@@ -12,10 +12,9 @@ echo "installing zplug plugin manager"
 curl -sL --proto-redir -all,\
 	https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
-# Add current file to vim config
+# Add current file to ~/.zshrc
 define(){ IFS='\n' read -r -d '' ${1} || true; }
 define LOADCONFIGSCRIPT <<EOF
-
 
 # Load "https://github.com/kaas3000/zsh-config" zsh configuration
 source $PWD/init.zsh
