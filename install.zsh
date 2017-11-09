@@ -29,5 +29,18 @@ source ~/.zshrc
 
 zplug install 
 
+echo "ZSH plugins are installed"
+echo "This configuration makes use of powerline.\n The script will now install compatible fonts."
+# Clone powerline fonts
+cd $(mktemp -d)
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
 echo "ZSH setup done!"
+echo "(Don't forget to set your terminal font to a powerline patched font. See https://github.com/powerline/fonts#font-families for available fonts)"
 
