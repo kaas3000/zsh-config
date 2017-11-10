@@ -17,7 +17,8 @@ define(){ IFS='\n' read -r -d '' ${1} || true; }
 define LOADCONFIGSCRIPT <<EOF
 
 # Load "https://github.com/kaas3000/zsh-config" zsh configuration
-source $PWD/init.zsh
+export KAAS3000ZSHROOT="$PWD"
+source \$KAAS3000ZSHROOT/init.zsh
 EOF
 
 echo "$LOADCONFIGSCRIPT" >> ~/.zshrc

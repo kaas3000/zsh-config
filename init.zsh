@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# Add leinigen zsh completions (clojure package manager)
+source $KAAS3000ZSHROOT/completions/lein_completion.zsh
+
 # Init zplug
 source ~/.zplug/init.zsh
 
