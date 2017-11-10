@@ -1,9 +1,5 @@
 #!/usr/bin/env zsh
 
-# Don't share history between sessions
-setopt no_share_history
-unsetopt share_history
-
 # Init zplug
 source ~/.zplug/init.zsh
 
