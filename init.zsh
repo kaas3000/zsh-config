@@ -9,6 +9,11 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
+# Jump words using ctrl+arrow keys
+bindkey -e
+bindkey '\e\e[C' forward-word
+bindkey '\e\e[D' backward-word
+bindkey '^[[3~' kill-word
 
 # Init zplug
 source ~/.zplug/init.zsh
@@ -32,4 +37,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 
 zplug load
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
 
