@@ -41,3 +41,5 @@ zplug load
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
+alias ll='ls -Fla'
+
