@@ -9,12 +9,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
-# Jump words using ctrl+arrow keys
-bindkey -e
-bindkey '\e\e[C' forward-word
-bindkey '\e\e[D' backward-word
-bindkey '^[[3~' kill-word
-
 # Init zplug
 source ~/.zplug/init.zsh
 
@@ -23,6 +17,9 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 
 # Oh my zsh git plugin providing git aliases
 zplug "plugins/git", from:oh-my-zsh
+
+# Docker/docker-compose autocompletion
+zplug "plugins/docker", from:oh-my-zsh
 
 # Agnoster theme
 zplug "agnoster/agnoster-zsh-theme", as:theme
@@ -40,6 +37,16 @@ zplug load
 
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
+
+# Jump words using ctrl+arrow keys
+bindkey -e
+bindkey '\e\e[C' forward-word
+bindkey '\e\e[D' backward-word
+bindkey '^[[3~' kill-word
+
+# Search through history using up/down keys
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 alias ll='ls -Fla'
 
