@@ -44,6 +44,10 @@ bindkey '\e\e[C' forward-word
 bindkey '\e\e[D' backward-word
 bindkey '^[[3~' kill-word
 
+# Enable home/end keys
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
 # Search through history using up/down keys
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
