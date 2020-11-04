@@ -54,3 +54,5 @@ bindkey '^[[B' history-substring-search-down
 
 alias ll='ls -Fla'
 
+source $KAAS3000ZSHROOT/alias.zsh
+
