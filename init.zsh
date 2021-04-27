@@ -21,8 +21,8 @@ zplug "plugins/git", from:oh-my-zsh
 # Docker/docker-compose autocompletion
 zplug "plugins/docker", from:oh-my-zsh
 
-# Agnoster theme
-zplug "agnoster/agnoster-zsh-theme", as:theme
+# # Agnoster theme
+# zplug "agnoster/agnoster-zsh-theme", as:theme
 
 # Fish syntax highlighting for ZSH
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -38,6 +38,9 @@ zplug load
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
+# Enable starship prompt
+eval "$(starship init zsh)"
+
 # Jump words using ctrl+arrow keys
 bindkey -e
 bindkey '\e\e[C' forward-word
@@ -51,8 +54,6 @@ bindkey '^[[F' end-of-line
 # Search through history using up/down keys
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-alias ll='ls -Fla'
 
 source $KAAS3000ZSHROOT/alias.zsh
 

@@ -13,7 +13,7 @@ alias fip="rg -uuu -i \
             --glob='!**/.mypy_cache/**' \
             --glob='!**/.phpunit.result.cache' \
             --glob='!**/.phpcs-cache' \
-            $HOME/projects/vagrant-development-environment/projects \
+            $HOME/vagrant-development-environment/projects \
             -e"
 
 # Vagrant shortcuts
@@ -22,3 +22,7 @@ alias err-web="clear && ssh webdev@127.0.0.1 -p 2222 -i $HOME/.vagrant.d/insecur
 alias err-bac="clear && ssh webdev@127.0.0.1 -p 2222 -i $HOME/.vagrant.d/insecure_private_key 'tail -f --lines 0 \$HOME/logs/nginx/backoffice.dev.ysp.cloud-error.log'"
 alias err-yspim="clear && ssh webdev@127.0.0.1 -p 2222 -i $HOME/.vagrant.d/insecure_private_key 'tail -f --lines 0 /var/log/nginx/images.dev.ysp.cloud-error.log'"
 
+
+# pbcopy/pbpaste on linux
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
