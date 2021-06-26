@@ -1,7 +1,9 @@
-set cfg_dir (status dirname)
+set cfg_dir (dirname (status filename))
 
 source $cfg_dir/git-alias.fish
 source $cfg_dir/../alias.zsh
+
+source $cfg_dir/themes/fish_tokyonight_night.fish
 
 # Disable welcome message
 set fish_greeting
