@@ -12,3 +12,8 @@ git clone https://github.com/kaas3000/zsh-config ~/.zshconfig
 cd ~/.zshconfig
 ./install.zsh
 ```
+
+
+### logid
+
+Logitech mouse config, move to `/etc/logid.cfg`
